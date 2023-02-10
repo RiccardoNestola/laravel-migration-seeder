@@ -13,19 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('train', function (Blueprint $table) {
+        Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->string('company', 200);
             $table->string('departure_station', 200);
             $table->string('arrival_station', 200);
-            $table->dateTimeTz('departure_time', $precision = 0);
-            $table->dateTimeTz('arrival_time', $precision = 0);
+            $table->time('departure_time');
+            $table->time('arrival_time');
             $table->string('train_code', 20);
             $table->tinyInteger('number_of_carriages');
             $table->boolean('in_time');
             $table->boolean('is_delete');
             $table->timestamps();
-            
             
         });
     }
@@ -40,3 +39,4 @@ return new class extends Migration
         Schema::dropIfExists('trains');
     }
 };
+
