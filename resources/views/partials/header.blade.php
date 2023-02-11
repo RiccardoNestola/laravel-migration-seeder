@@ -6,7 +6,7 @@
           </a>
         </div>
       </nav>
-      <h1 class="text-center pt-4">Dettagli partenze</h1>
+      <h1 class="text-center pt-4 text-uppercase">Dettagli partenze</h1>
     
 </header>
 
