@@ -1,1 +1,70 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+
+table {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+thead {
+    background-color: #b41313;
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    padding: 20px;
+    font-weight: bold;
+    width: 33.33%;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tr:nth-child(even) {
+    background-color: #dcdcdc;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Media Query */
+@media only screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    th,
+    td {
+        width: 100%;
+        text-align: center;
+    }
+
+    th:first-child,
+    td:first-child {
+        text-align: left;
+    }
+}
+
+
